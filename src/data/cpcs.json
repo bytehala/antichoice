@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "accueil-grossesse-beauce-apalaches",
+    "name": "Accueil Grossesse Beauce-Apalaches",
+    "charity_num": "135591998",
+    "charity_type": "Poverty",
+    "org_type": "CPC",
+    "affiliate_of": "",
+    "city": "St. Georgeos de Beauce",
+    "province": "QC",
+    "other_names": "",
+    "website": [
+      "https://www.accueilgrossesse.com"
+    ],
+    "sex_ed_programs": "",
+    "description": "Accueil Grossesse Beauce-Apalaches is a registered charity that is considered by Abortion Rights Coalition of Canada to be an anti-choice crisis pregnancy centre or religious post-abortion counselling agency"
+  },
+  {
+    "slug": "accueil-grossesse-birthright-drummondville",
+    "name": "Accueil Grossesse Birthright Drummondville",
+    "charity_num": "890639396",
+    "charity_type": "Poverty",
+    "org_type": "CpC",
+    "affiliate_of": "Birthright / Alliance Resources Grossesse",
+    "city": "Drummondville",
+    "province": "QC",
+    "other_names": "",
+    "website": [
+      "https://www.birthright.org",
+      "https://www.facebook.com/Accueil.Grossesse.Birthright.Drummondville"
+    ],
+    "sex_ed_programs": "",
+    "description": "Accueil Grossesse Birthright Drummondville is a registered charity that is considered by Abortion Rights Coalition of Canada to be an anti-choice crisis pregnancy centre or religious post-abortion counselling agency"
+  },
+  {
+    "slug": "aid-to-women-crisis-pregnancy-centre",
+    "name": "Aid to Women Crisis Pregnancy Centre",
+    "charity_num": "889859468",
+    "charity_type": "Poverty",
+    "org_type": "CPC",
+    "affiliate_of": "",
+    "city": "Toronto",
+    "province": "ON",
+    "other_names": "Lifeline",
+    "website": [
+      "https://www.aidtowomen.ca",
+      "https://www.facebook.com/AidtoWomen",
+      "https://x.com/AidToronto",
+      "https://instagram.com/aidtowomentoronto"
+    ],
+    "sex_ed_programs": "",
+    "description": "Aid to Women Crisis Pregnancy Centre is a registered charity that is considered by Abortion Rights Coalition of Canada to be an anti-choice crisis pregnancy centre or religious post-abortion counselling agency"
+  }
+]

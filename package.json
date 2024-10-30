@@ -3,10 +3,22 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "generateData": "node src/scripts/generateJson.js",
+    "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./output/css/styles.css --minify",
+    "build": "yarn build:css && node src/scripts/generateSite.js",
+    "serve": "npx http-server ./output",
+    "watch": "nodemon",
+    "dev": "npx concurrently \"yarn watch\" \"yarn serve\""
+  },
   "dependencies": {
     "autoprefixer": "^10.4.20",
+    "csv-parser": "^3.0.0",
     "ejs": "^3.1.10",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }
