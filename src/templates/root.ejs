@@ -117,6 +117,15 @@
     }
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<div id="checkbox-container" class="text-[#001524] w-full mt-8"></div>
+<div id="sections-container"></div>
+<div class="mt-8">
+    <input id="search-input" type="text" placeholder="Search organizations..." class="p-2 border border-gray-300 rounded w-full">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const provinces = [
@@ -238,50 +247,65 @@
             toggleProvinceGroup(province.code.toLowerCase(), checkbox.checked);
         });
 
-        // Load JSON data and populate each province section with org-objects
-        fetch('./cpcs.json')
-            .then(response => response.json())
-            .then(data => {
-                const sections = {}; // To track if any orgs have been added to each section
+        // Populate sections based on data
+        function populateSections(data) {
+            const sections = {};
 
-                data.forEach(cpc => {
-                    // Determine the correct section based on the province
-                    const sectionId = `${cpc.province.toLowerCase()}-section`;
-                    const section = document.getElementById(sectionId);
+            data.forEach(cpc => {
+                const sectionId = `${cpc.province.toLowerCase()}-section`;
+                const section = document.getElementById(sectionId);
 
-                    if (section) {
-                        // Track that this section has at least one organization
-                        sections[sectionId] = true;
-
-                        // Create an org-object element with name, city, and province
-                        const orgObject = document.createElement('span');
-                        orgObject.classList.add('col-span-12', 'mt-4', 'md:col-span-6', 'xl:col-span-4', 'px-2');
-                        orgObject.innerHTML = `
+                if (section) {
+                    sections[sectionId] = true;
+                    const orgObject = document.createElement('span');
+                    orgObject.classList.add('col-span-12', 'mt-4', 'md:col-span-6', 'xl:col-span-4', 'px-2');
+                    orgObject.innerHTML = `
                         <a href="/${cpc.slug}" class="org-object block cursor-pointer">
                             <span>${cpc.name}</span>
                             <span class="text-lg block font-extralight">${cpc.city}, ${cpc.province}</span>
                         </a>
                     `;
+                    section.querySelector('.grid').appendChild(orgObject);
+                }
+            });
 
-                        // Append the org-object to the section
-                        section.querySelector('.grid').appendChild(orgObject);
-                    }
-                });
+            document.querySelectorAll('[id$="-section"]').forEach(section => {
+                if (!sections[section.id]) {
+                    const message = document.createElement('div');
+                    message.classList.add('text-lg', 'block', 'font-extralight', 'text-center', 'mt-4');
+                    message.textContent = "No known organizations. If you think this is a mistake, please let us know.";
+                    section.appendChild(message);
+                }
+            });
+        }
 
-                // Check each province section and display a message if empty
-                document.querySelectorAll('[id$="-section"]').forEach(section => {
-                    if (!sections[section.id]) {
-                        // Display the no-organizations message
-                        const message = document.createElement('div');
-                        message.classList.add('text-lg', 'block', 'font-extralight', 'text-center', 'mt-4');
-                        message.textContent = "No known organizations. If you think this is a mistake, please let us know.";
-                        section.appendChild(message);
-                    }
-                });
+        // Clear all sections
+        function clearSections() {
+            document.querySelectorAll('[id$="-section"] .grid').forEach(grid => grid.innerHTML = '');
+        }
+
+        let allData = []; // Store all data globally
+
+        fetch('./cpcs.json')
+            .then(response => response.json())
+            .then(data => {
+                allData = data; // Store data globally
+                fuse = new Fuse(allData, { keys: ['slug', 'name', 'city', 'province'], threshold: 0.3 });
+                populateSections(allData); // Use data to populate sections initially
             })
             .catch(error => console.error('Error loading JSON data:', error));
+
+// Use allData for search results without refetching
+        document.getElementById('search-input').addEventListener('input', (event) => {
+            const query = event.target.value;
+            const results = query ? fuse.search(query).map(result => result.item) : allData;
+            clearSections();
+            populateSections(results);
+        });
+
     });
 </script>
+
 
 </body>
 </html>
