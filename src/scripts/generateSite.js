@@ -48,7 +48,7 @@ data.forEach(cpc => {
                 console.error(`Error rendering page for ${cpc.slug}:`, err);
                 return;
             }
-            fs.writeFileSync(path.join(outputDir, 'cpc', `${cpc.slug}.html`), cpcHtml);
+            fs.writeFileSync(path.join(outputDir, `${cpc.slug}.html`), cpcHtml);
             console.log(`Page generated for ${cpc.slug}`);
         }
     );
