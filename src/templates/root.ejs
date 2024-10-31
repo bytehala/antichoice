@@ -251,6 +251,14 @@
         function populateSections(data) {
             const sections = {};
 
+            // Clear previous content in each section
+            document.querySelectorAll('[id$="-section"] .grid').forEach(grid => {
+                grid.innerHTML = ''; // Clear existing org-objects
+            });
+            document.querySelectorAll('[id$="-section"] .no-orgs-message').forEach(msg => {
+                msg.remove(); // Remove previous "No known organizations" messages
+            });
+
             data.forEach(cpc => {
                 const sectionId = `${cpc.province.toLowerCase()}-section`;
                 const section = document.getElementById(sectionId);
@@ -258,21 +266,29 @@
                 if (section) {
                     sections[sectionId] = true;
                     const orgObject = document.createElement('span');
+
+                    let charityNumSpan = '';
+                    if (cpc.charity_num) {
+                        charityNumSpan = `<span class="text-lg block font-extralight">Charity # ${cpc.charity_num}</span>`;
+                    }
+
                     orgObject.classList.add('col-span-12', 'mt-4', 'md:col-span-6', 'xl:col-span-4', 'px-2');
                     orgObject.innerHTML = `
-                        <a href="/${cpc.slug}" class="org-object block cursor-pointer">
-                            <span>${cpc.name}</span>
-                            <span class="text-lg block font-extralight">${cpc.city}, ${cpc.province}</span>
-                        </a>
-                    `;
+                <a href="/${cpc.slug}" class="org-object block cursor-pointer">
+                    <span>${cpc.name}</span>
+                    <span class="text-lg block font-extralight">${cpc.city}, ${cpc.province}</span>
+                    ${charityNumSpan}
+                </a>
+            `;
                     section.querySelector('.grid').appendChild(orgObject);
                 }
             });
 
+            // Display "No known organizations" message if a section is empty
             document.querySelectorAll('[id$="-section"]').forEach(section => {
                 if (!sections[section.id]) {
                     const message = document.createElement('div');
-                    message.classList.add('text-lg', 'block', 'font-extralight', 'text-center', 'mt-4');
+                    message.classList.add('no-orgs-message', 'text-lg', 'block', 'font-extralight', 'text-center', 'mt-4');
                     message.textContent = "No known organizations. If you think this is a mistake, please let us know.";
                     section.appendChild(message);
                 }

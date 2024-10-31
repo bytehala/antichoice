@@ -208,64 +208,19 @@ num	name	is_charity	charity_num	charity_type	org_type	affiliate_of	city	province
 207.0	Pembina Valley Pregnancy Care Centre	Y	107832057	Poverty	CPC	PCC / Heartbeat Int’l / Evangelical	Winkler	MB		www.pvpcc.com www.facebook.com/pvpregnancycarecentr e www.instagram.com/pvpregnancycare/?hl =en											
 208.0	Pembina Valley Pregnancy Care Centre Inc.	Y	107832057	Poverty	CPC	PCC / Heartbeat Int’l / Evangelical	Morden	MB		www.pvpcc.com www.facebook.com/pvpregnancycarecentr e www.instagram.com/pvpregnancycare/?hl =en											
 209.0	Peterborough Pregnancy Support Services	Y	129800116	"Community Org., Resource"	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Peterborough	ON		www.mypregnancycentre.org www.facebook.com/PeterboroughPregnan cy Twitter: @Ptbo_Canada @downtownPtbo	"Pause and Think (in schools). www.mypregnancycentre.org/relationsh ips Community/school education: awareness about sexual health, healthy relationships, learn the risks of sexual activity, how to develop personal boundaries, how to identify healthy relationships"										
-210.0	Pet erborough Pro Life Association	N			Advocacy	Alliance for Life Ont.	Peterborough	ON		http://peterboroughprolife.com/											
-211.0	Pha rmacists for Life International – Canada	N			Advocacy		Calgary? (U.S. based org)	AB		www.pfli.org/											
-212.0	Pos t-Abortion Community Services	Y	136223971	Poverty	CPC	PCC / Heartbeat Int’l / Evangelical	Burnaby	BC	Run by Christian Advocacy Society of Greater Vancouver	www.pacscanada.org/	"None, but their two CPCs offer the SHARE program."										
-213.0	Pra irie Pregnancy Support Centre	Y	703593327	"Community Org., Health"	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Portage La Prairie	MB		www.prairiepregnancy.com www.facebook.com/prairiepregnancy											
+210.0	Peterborough Pro Life Association	N			Advocacy	Alliance for Life Ont.	Peterborough	ON		http://peterboroughprolife.com/											
+211.0	Pharmacists for Life International - Canada	N			Advocacy		Calgary? (U.S. based org)	AB		www.pfli.org/											
+212.0	Post-Abortion Community Services	Y	136223971	Poverty	CPC	PCC / Heartbeat Int’l / Evangelical	Burnaby	BC	Run by Christian Advocacy Society of Greater Vancouver	www.pacscanada.org/	"None, but their two CPCs offer the SHARE program."										
+213.0	Prairie Pregnancy Support Centre	Y	703593327	"Community Org., Health"	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Portage La Prairie	MB		www.prairiepregnancy.com www.facebook.com/prairiepregnancy											
 214.0	Pregnancy & Family Care of Quinte West	Y	773623509	Poverty	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Trenton	ON	(new tax # as of Jan 2023) Satellite of Belleville Pregnancy and Family Care Centre	www.pfcqw.ca www.facebook.com/Pregnancy-and- Family-Care-of-Quinte-West- 261165260685238/	4U Community Education Program for schools (same topics as Take Charge) http://bellevillepregnancyandfamilycare centre.com/community-education.php Belleville still offering 4U										
 215.0	Pregnancy & Wellness Centre of Moncton Inc.	Y	119044287	Poverty	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Moncton	NB	Pregnancy Resource Centre of Moncton / Moncton Crisis Pregnancy Centre Inc.	www.monctonwellness.ca/ www.facebook.com/Pregnancy-Wellness- Centre-of-Moncton- 198205426863388/ https://twitter.com/monctonwellness											
 216.0	Pregnancy Care & Family Support Centre	Y	862146230	Poverty	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Haliburton	ON	Highlands Community Pregnancy Care Centre Inc.	www.haliburtonpregnancycentre.ca www.facebook.com/HaliburtonPregnancyC entre/	“Sexual health and pregnancy education.” Details unspecified https://www.haliburtonpregnancycentre .ca/who-are-we										
 217.0	Pregnancy Care Canada	Y	880400221	Religion	Advocacy	Heartbeat Int’l	Red Deer	AB	Previously Canadian Association of Pregnancy Support Services (CAPSS). Previous to that: Christian Assoc. of Pregnancy Support Services (umbrella group for CPCs)	https://pregnancycarecanada.ca (Was: https://capss.com)											
 218.0	Pregnancy Care Centre	Y	119074623	Poverty	CPC	PCC / Care Net / Evangelical	Barrhead	AB	Outreach for Life Association of Edmonton / Edmonton Pregnancy Care Centre / Pregnancy Care Centre / Abortion Recovery Centre 	www.pregnancycarecentre.ca www.facebook.com/pccedmonton?fref=ts / https://twitter.com/PCCyeg www.instagram.com/pccedmonton/											
-219.0	Pregnancy Care Centre	Y	107786683	Poverty	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	North York	ON	"Pregnancy Care
-Centre Toronto
-(legal name)
-The Pregnancy Care
-Centre /
-iamnotalone
-(Hispanic Centre)"	"www.iamnotalone.ca
-www.facebook.com/pregnancycarecentre.
-org/
-www.instagram.com/pregnancycarecentre
-/
-www.youtube.com/channel/UCXa9uzzzm
-MIgsTS7QftJQDw"											
-220.0	Pregnancy Care Centre	Y	107786683	Poverty	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Richmond Hill	ON	"Pregnancy Care
-Centre Toronto
-(legal name)
-The Pregnancy Care
-Centre /
-iamnotalone"	"www.iamnotalone.ca
-www.facebook.com/pregnancycarecentre.
-org/
-www.instagram.com/pregnancycarecentre
-/
-www.youtube.com/channel/UCXa9uzzzm
-MIgsTS7QftJQDw"											
-221.0	Pregnancy Care Centre	Y	107786683	Poverty	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Scarborough	ON	"Pregnancy Care
-Centre Toronto
-(legal name)
-The Pregnancy Care
-Centre /
-iamnotalone"	"www.iamnotalone.ca
-www.facebook.com/pregnancycarecentre.
-org/
-www.instagram.com/pregnancycarecentre
-/
-www.youtube.com/channel/UCXa9uzzzm
-MIgsTS7QftJQDw"											
-222.0	Pregnancy Care Centre	Y	107786683	Poverty	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Toronto (downtown)	ON	"Pregnancy Care
-Centre Toronto
-(legal name)
-The Pregnancy Care
-Centre /
-iamnotalone"	"www.iamnotalone.ca
-www.facebook.com/pregnancycarecentre.
-org/
-www.instagram.com/pregnancycarecentre
-/
-www.youtube.com/channel/UCXa9uzzzm
-MIgsTS7QftJQDw"											
+219.0	Pregnancy Care Centre	Y	107786683	Poverty	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	North York	ON	Pregnancy Care Centre Toronto (legal name) /The Pregnancy Care Centre / iamnotalone (Hispanic Centre	www.iamnotalone.ca www.facebook.com/pregnancycarecentre.org/ www.instagram.com/pregnancycarecentre/ www.youtube.com/channel/UCXa9uzzzmMIgsTS7QftJQDw											
+220.0	Pregnancy Care Centre	Y	107786683	Poverty	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Richmond Hill	ON	Pregnancy Care Centre Toronto (legal name) / The Pregnancy Care Centre / iamnotalone	www.iamnotalone.ca www.facebook.com/pregnancycarecentre.org/ www.instagram.com/pregnancycarecentre/ www.youtube.com/channel/UCXa9uzzzmMIgsTS7QftJQDw											
+221.0	Pregnancy Care Centre	Y	107786683	Poverty	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Scarborough	ON	Pregnancy Care Centre Toronto (legal name) / The Pregnancy Care Centre / iamnotalone	www.iamnotalone.ca www.facebook.com/pregnancycarecentre.org/ www.instagram.com/pregnancycarecentre/ www.youtube.com/channel/UCXa9uzzzmMIgsTS7QftJQDw											
+222.0	Pregnancy Care Centre	Y	107786683	Poverty	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Toronto (downtown)	ON	Pregnancy Care Centre Toronto (legal name) / The Pregnancy Care Centre / iamnotalone	www.iamnotalone.ca www.facebook.com/pregnancycarecentre.org/ www.instagram.com/pregnancycarecentre/ www.youtube.com/channel/UCXa9uzzzmMIgsTS7QftJQDw											
 223.0	Pregnancy Care Centre and Infant Food Bank	Y	897203857	Poverty	CPC		Sudbury	ON		www.pccifb.ca/											
 224.0	Pregnancy Care Centre Grande Prairie & Area	Y	823564984	"Community Org., Health"	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Grande Prairie	AB		https://pccgp.ca www.facebook.com/pccgp/ www.instagram.com/pregcaregp/?hl=en www.youtube.com/channel/UCZBie1h8EO 3ALS6lfRJFL4g											
 225.0	Pregnancy Centre (The)	Y	131909046	Poverty	CPC	PCC / Heartbeat Int’l / Care Net / Evangelical	Sault Ste. Marie	ON	Algoma Crisis Pregnancy Centre	http://algomapregnancy.com/ www.facebook.com/algomapregnancy/											
