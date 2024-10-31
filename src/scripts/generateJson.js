@@ -1,81 +1,55 @@
 const fs = require('fs');
 const path = require('path');
-const csv = require('csv-parser');
-const results = [];
+const Papa = require('papaparse');
 
-// Function to create slugs from the organization name
-const createSlug = (name) => {
-    return name
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/(^-|-$)/g, '');
-};
+// Define paths
+const inputFilePath = path.join(__dirname, '../data/cpc_list.tsv');
+const outputFilePath = path.join(__dirname, '../data/cpcs.json');
 
-// Updated function to parse website and social media links with semicolon as delimiter
+// Function to parse website/social media URLs
 const parseWebsiteArray = (data) => {
-    // Match content strictly within the first set of square brackets
-    const matchedArray = data.match(/\[([^\]]*)\]/);
-    if (!matchedArray) return []; // Return empty array if no match is found
-
-    // Split by semicolons, trim spaces, and clean up each URL
-    const urls = matchedArray[1]
-        .split(';')
-        .map((url) => url.trim().replace(/^"|"$/g, '')); // Remove surrounding quotes
-
-    // Normalize URLs to add "https://" if missing
-    return urls
-        .filter((url) => url.length > 0) // Ensure the URL isn't empty
-        .map((url) => {
-            return url.startsWith('http') ? url : `https://${url}`;
-        });
+    return data.split(';').map(url => url.trim().replace(/^"|"$/g, '')).filter(url => url.length > 0);
 };
 
+// Read the TSV file
+fs.readFile(inputFilePath, 'utf-8', (err, data) => {
+    if (err) {
+        console.error('Error reading TSV file:', err);
+        return;
+    }
 
-// Read CSV and parse each row
-fs.createReadStream(path.join(__dirname, '../data/cpc_list.csv'))
-    .pipe(csv())
-    .on('data', (row) => {
-        const {
-            name,
-            is_charity,
-            charity_num,
-            charity_type,
-            org_type,
-            affiliate_of,
-            city,
-            province,
-            other_names,
-            website_and_social_media,
-            sex_ed_programs,
-        } = row;
-
-        // Prepare the JSON object for each row
-        const orgObject = {
-            slug: createSlug(name),
-            name,
-            charity_num,
-            charity_type,
-            org_type,
-            affiliate_of: affiliate_of || "",
-            city,
-            province,
-            other_names: other_names || "",
-            website: parseWebsiteArray(website_and_social_media),
-            sex_ed_programs: sex_ed_programs || "",
-            description: `${name} ${
-                is_charity === 'Y'
-                    ? 'is a registered charity'
-                    : 'is an organization'
-            } that is considered by Abortion Rights Coalition of Canada to be an anti-choice crisis pregnancy centre or religious post-abortion counselling agency`,
-        };
-
-        results.push(orgObject);
-    })
-    .on('end', () => {
-        // Write to JSON file
-        fs.writeFileSync(
-            path.join(__dirname, '../data/cpcs.json'),
-            JSON.stringify(results, null, 2)
-        );
-        console.log('CSV successfully converted to JSON!');
+    // Parse the TSV data using PapaParse
+    const parsedData = Papa.parse(data, {
+        delimiter: '\t',
+        header: true,
+        skipEmptyLines: true,
     });
+
+    // Process parsed rows
+    const jsonData = parsedData.data.map(entry => ({
+        slug: entry.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+        name: entry.name,
+        is_charity: entry.is_charity,
+        charity_num: entry.charity_num,
+        charity_type: entry.charity_type,
+        org_type: entry.org_type,
+        affiliate_of: entry.affiliate_of,
+        city: entry.city,
+        province: entry.province,
+        other_names: entry.other_names || '',
+        website: parseWebsiteArray(entry.website_and_social_media || ''),
+        sex_ed_programs: entry.sex_ed_programs || '',
+        description: `${entry.name} ${
+            entry.is_charity === 'Y' ? 'is a registered charity' : 'is an organization'
+        } that is considered by Abortion Rights Coalition of Canada to be an anti-choice crisis pregnancy centre or religious post-abortion counselling agency`,
+    }));
+
+    // Write the JSON output
+    fs.writeFile(outputFilePath, JSON.stringify(jsonData, null, 2), (err) => {
+        if (err) {
+            console.error('Error writing JSON file:', err);
+            return;
+        }
+        console.log('JSON file created successfully:', outputFilePath);
+    });
+});

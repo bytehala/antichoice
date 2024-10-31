@@ -1,4 +1,6 @@
+cpc_list
 name,is_charity,charity_num,charity_type,org_type,affiliate_of,city,province,other_names,website_and_social_media,sex_ed_programs
-Accueil Grossesse Beauce-Apalaches,Y,135591998,Poverty,CPC,,St. Georgeos de Beauce,QC,,["www.accueilgrossesse.com"],
-Accueil Grossesse Birthright Drummondville,Y,890639396,Poverty,CpC,Birthright / Alliance Resources Grossesse,Drummondville,QC,,["www.birthright.org";"www.facebook.com/Accueil.Grossesse.Birthright.Drummondville"],
-Aid to Women Crisis Pregnancy Centre,Y,889859468,Poverty,CPC,,Toronto,ON,Lifeline,["www.aidtowomen.ca";"www.facebook.com/AidtoWomen";"x.com/AidToronto";"instagram.com/aidtowomentoronto"],
+40 Days for Life Toronto,N,,Advocacy,,40 Days for Life,Toronto,ON,,"[""www.40daysforlife.com/en/toronto/""; “www.facebook.com/40Days4LifeToronto/""]",
+Accueil Grossesse Beauce-Apalaches,Y,135591998,Poverty,CPC,,St. Georgeos de Beauce,QC,,"[""www.accueilgrossesse.com""]",
+Accueil Grossesse Birthright Drummondville,Y,890639396,Poverty,CpC,Birthright / Alliance Resources Grossesse,Drummondville,QC,,"[""www.birthright.org"";""www.facebook.com/Accueil.Grossesse.Birthright.Drummondville""]",
+Aid to Women Crisis Pregnancy Centre,Y,889859468,Poverty,CPC,,Toronto,ON,Lifeline,"[""www.aidtowomen.ca"";""www.facebook.com/AidtoWomen"";""x.com/AidToronto"";""instagram.com/aidtowomentoronto""]",

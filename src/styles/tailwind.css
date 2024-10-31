@@ -4,8 +4,17 @@
 
 html, body {
     max-width: 100% !important;
-    overflow-x: hidden !important;
+    overflow-x: scroll !important;
     font-family: 'Montserrat', sans-serif;
+}
+
+.table-container {
+    overflow-x: auto; /* Enable horizontal scroll only on this container */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
+}
+
+.table-auto {
+    min-width: 100%; /* Ensure table takes full width for scrolling */
 }
 
 /* cyrillic-ext */

@@ -13,11 +13,11 @@
 
 <!-- Main Content -->
 <div class="grid grid-cols-12 py-12 pt-32 md:py-36 relative pb-20 md:pb-36 md:pt-56 block bg-[#001524] text-gray-50">
-    <div class="col-centered tracking-wide uppercase md:px-0 px-4 col-span-12 text-6xl md:text-8xl font-extrabold text-center">
+    <div class="col-centered tracking-wide uppercase md:px-0 px-4 col-span-12 text-4xl md:text-6xl font-extrabold text-center">
         <div class="text-center col-centered">
             CPC Directory
         </div>
-        <div class="px-2 md:px-2 md:px-2 md:px-8 max-w-6xl">
+        <div class="px-2 md:px-2 md:px-2 md:px-8 max-w-6xl mx-auto">
             <div class="normal-case tracking-normal font-bold mt-4 text-lg md:text-xl">
                 We aim to stop dishonest Canadian charities and organizations from restricting a woman’s access to the reproductive care that is best for her.
                 Check this directory to find out if the organization you are considering provides the services you need.
@@ -34,18 +34,35 @@
         </div>
     </div>
 </div>
-<main class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+<main class="mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
     <h1 class="text-3xl font-bold mb-4">Welcome to the Crisis Pregnancy Centers Directory</h1>
     <p class="text-gray-700 mb-4">Browse our list of crisis pregnancy centers and learn more about each organization.</p>
-    <ul class="list-disc pl-6">
-        <% cpcs.forEach(cpc => { %>
-            <li>
-                <a href="/cpc/<%= cpc.slug %>.html" class="text-blue-500 hover:text-blue-700 font-semibold underline">
-                    <%= cpc.name %>
-                </a>
-            </li>
-        <% }) %>
-    </ul>
+    <h1 class="text-2xl font-bold mb-6">CPC Data Table</h1>
+
+    <!-- Table to display CPC data -->
+    <div class="table-container">
+        <table class="table-auto w-full bg-white shadow-md rounded">
+            <thead>
+            <tr class="bg-gray-800 text-white">
+                <th class="px-4 py-2">Name</th>
+                <th class="px-4 py-2">Is Charity</th>
+                <th class="px-4 py-2">Charity Number</th>
+                <th class="px-4 py-2">Charity Type</th>
+                <th class="px-4 py-2">Organization Type</th>
+                <th class="px-4 py-2">Affiliate Of</th>
+                <th class="px-4 py-2">City</th>
+                <th class="px-4 py-2">Province</th>
+                <th class="px-4 py-2">Other Names</th>
+                <th class="px-4 py-2">Websites</th>
+                <th class="px-4 py-2">Sex Ed Programs</th>
+    <!--            <th class="px-4 py-2">Description</th>-->
+            </tr>
+            </thead>
+            <tbody id="table-body">
+            <!-- Rows will be generated dynamically here -->
+            </tbody>
+        </table>
+    </div>
 </main>
 
 <!-- JavaScript for toggling the mobile menu -->
@@ -60,6 +77,43 @@
         mobileMenu.classList.toggle('hidden');
     });
 </script>
+<script src="./cpcs.json"></script>
+<script>
+    // Load the JSON data and render the table
+    fetch('./cpcs.json')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById('table-body');
+
+            data.forEach(cpc => {
+                // Create a table row
+                const row = document.createElement('tr');
+                row.classList.add('border-b');
+
+                // Add data to each cell in the row using JavaScript template literals
+                row.innerHTML = `
+                    <td class="px-4 py-2">
+                        <a href="/cpc/${cpc.slug}" class="text-blue-500 hover:underline">${cpc.name}</a>
+                    </td>
+                    <td class="px-4 py-2">${cpc.is_charity}</td>
+                    <td class="px-4 py-2">${cpc.charity_num}</td>
+                    <td class="px-4 py-2">${cpc.charity_type}</td>
+                    <td class="px-4 py-2">${cpc.org_type}</td>
+                    <td class="px-4 py-2">${cpc.affiliate_of}</td>
+                    <td class="px-4 py-2">${cpc.city}</td>
+                    <td class="px-4 py-2">${cpc.province}</td>
+                    <td class="px-4 py-2">${cpc.other_names}</td>
+                    <td class="px-4 py-2">${cpc.website.join('\n ')}</td>
+                    <td class="px-4 py-2">${cpc.sex_ed_programs}</td>
+                `;
+
+                // Append the row to the table body
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => console.error('Error loading JSON data:', error));
+</script>
+
 
 </body>
 </html>

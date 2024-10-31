@@ -14,6 +14,14 @@ if (!fs.existsSync(path.join(outputDir, 'cpc'))) {
     fs.mkdirSync(path.join(outputDir, 'cpc'));
 }
 
+
+// Copy JSON data to the output directory
+fs.copyFileSync(
+    path.join(__dirname, '../data/cpcs.json'),
+    path.join(outputDir, 'cpcs.json')
+);
+console.log('JSON data copied to output directory.');
+
 // Generate the main index page using ejs.renderFile
 ejs.renderFile(
     path.join(__dirname, '../templates/root.ejs'),
