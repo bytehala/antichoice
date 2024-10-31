@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Cell Combiner with Enlarged Output Fields</title>
+</head>
+<body>
+    <h1>CSV Cell Combiner with Enlarged Output Fields</h1>
+    <textarea id="inputCSV" rows="10" cols="100" placeholder="Paste CSV data here..."></textarea><br><br>
+    <button onclick="combineCells()">Combine Rows to Single Row</button>
+    <h2>Cells:</h2>
+    <div id="outputCells"></div>
+
+    <script>
+        function combineCells() {
+            // Clear any existing fields
+            document.getElementById('outputCells').innerHTML = '';
+
+            // Grab the CSV data from the textarea
+            const csvData = document.getElementById('inputCSV').value;
+
+            // Split into lines and then into cells by commas
+            const rows = csvData.split(/\r?\n/).map(row => row.split(','));
+            const columnCount = Math.max(...rows.map(row => row.length));
+            const combinedCells = new Array(columnCount).fill("");
+
+            // Combine fragments in the same column across rows
+            rows.forEach(row => {
+                row.forEach((cell, index) => {
+                    if (cell.trim()) {
+                        combinedCells[index] += (combinedCells[index] ? " " : "") + cell.trim();
+                    }
+                });
+            });
+
+            // Create a textarea and copy button for each combined cell for better readability
+            combinedCells.forEach((cell, index) => {
+                // Create a wrapper div for each cell field and button
+                const cellWrapper = document.createElement('div');
+                cellWrapper.style.marginBottom = '12px';
+
+                // Create the textarea for each cell
+                const textAreaField = document.createElement('textarea');
+                textAreaField.rows = 4;  // More rows for larger visibility
+                textAreaField.cols = 80;  // Wider field for easier viewing
+                textAreaField.value = cell;
+                textAreaField.id = 'cell_' + index;
+                textAreaField.readOnly = true;
+                cellWrapper.appendChild(textAreaField);
+
+                // Create the copy button for each cell
+                const copyButton = document.createElement('button');
+                copyButton.textContent = 'Copy';
+                copyButton.style.marginLeft = '8px';
+                copyButton.onclick = function() {
+                    copyToClipboard(textAreaField.id);
+                };
+                cellWrapper.appendChild(copyButton);
+
+                // Add the wrapper to the output container
+                document.getElementById('outputCells').appendChild(cellWrapper);
+            });
+        }
+
+        function copyToClipboard(elementId) {
+            const copyText = document.getElementById(elementId);
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand("copy");
+            alert("Copied: " + copyText.value);
+        }
+    </script>
+</body>
+</html>
