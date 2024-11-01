@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "generateData": "node src/scripts/generateJson.js",
-    "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./output/css/styles.css --minify",
+    "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./docs/css/styles.css --minify",
     "build": "yarn build:css && node src/scripts/generateSite.js",
     "serve": "npx http-server ./output",
     "watch": "nodemon",
