@@ -14,7 +14,6 @@ if (!fs.existsSync(path.join(outputDir, 'cpc'))) {
     fs.mkdirSync(path.join(outputDir, 'cpc'));
 }
 
-
 // Copy JSON data to the output directory
 fs.copyFileSync(
     path.join(__dirname, '../data/cpcs.json'),
@@ -50,6 +49,25 @@ data.forEach(cpc => {
             }
             fs.writeFileSync(path.join(outputDir, `${cpc.slug}.html`), cpcHtml);
             console.log(`Page generated for ${cpc.slug}`);
+        }
+    );
+});
+
+// Render static pages (about and support)
+const staticPages = ['about', 'support'];
+
+staticPages.forEach(page => {
+    ejs.renderFile(
+        path.join(__dirname, `../templates/static/${page}.ejs`),
+        {},
+        { views: path.join(__dirname, '../templates') },
+        (err, staticHtml) => {
+            if (err) {
+                console.error(`Error rendering ${page} page:`, err);
+                return;
+            }
+            fs.writeFileSync(path.join(outputDir, `${page}.html`), staticHtml);
+            console.log(`${page.charAt(0).toUpperCase() + page.slice(1)} page generated successfully`);
         }
     );
 });

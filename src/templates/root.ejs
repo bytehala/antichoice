@@ -19,9 +19,13 @@
         </div>
         <div class="px-2 md:px-2 md:px-2 md:px-8 max-w-6xl mx-auto">
             <div class="normal-case tracking-normal font-bold mt-4 text-lg md:text-xl">
-                We aim to stop dishonest Canadian charities and organizations from restricting a woman’s access to the
-                reproductive care that is best for her.
-                Check this directory to find out if the organization you are considering provides the services you need.
+                <br>
+<!--                "To stop dishonest Canadian charities and organizations from restricting a woman’s access to the-->
+<!--                reproductive care that is best for her."-->
+<!--                <br/><br/>-->
+                <div class="max-w-screen-md mx-auto text-center">
+                    Groups that appear in this directory are considered anti-choice by the<br/>Abortion Rights Coalition of Canada.
+                </div>
             </div>
             <div class="mt-4">
                 <a href="#search_orgs">
@@ -90,17 +94,7 @@
     </div>
 </div>
 
-<!-- JavaScript for toggling the mobile menu -->
-<script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
 
-    mobileMenuButton.addEventListener('click', () => {
-        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-        mobileMenu.classList.toggle('hidden');
-    });
-</script>
 <script src="./cpcs.json"></script>
 <script>
     function toggleSection(section) {
