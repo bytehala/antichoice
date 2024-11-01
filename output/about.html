@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About antichoice.ca</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<!-- Include Navbar Partial -->
+<!-- Navbar -->
+<nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex-shrink-0">
+                <a href="/" class="text-white font-extrabold text-2xl">AntiChoice.ca</a>
+            </div>
+
+            <!-- Links (hidden on mobile) -->
+            <div class="hidden sm:block">
+                <div class="flex space-x-4">
+                    <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="/support" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Support</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="sm:hidden">
+                <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" class="text-gray-300 hover:text-white hover:bg-gray-700 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Hamburger icon -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="sm:hidden hidden">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+            <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+            <a href="/support" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Support</a>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- JavaScript for toggling the mobile menu -->
+<script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+<main class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+    <h1 class="text-gray-700 mb-4">About</h1>
+    <p class="text-gray-700 mb-4">From the Government of Canada website:</p>
+
+    <blockquote class="border-l-4 border-gray-300 pl-4 text-gray-700 italic mb-4 space-y-4">
+        <p>
+            Registered charities are provided federal, as well as provincial or territorial, supports under the tax system that
+            includes an exemption from income tax and the ability to issue official donation receipts for any gifts that they receive.
+            In return, all registered charities are expected to follow the rules and principles set out in the Income Tax Act
+            to ensure that they are operating for charitable purposes and providing activities for the benefit of the public.
+        </p>
+
+        <p>
+            Concerns have been raised that some registered charities that offer reproductive health services to women,
+            including pregnancy options counselling, may be spreading misinformation by presenting themselves as neutral,
+            full-service pregnancy support service organizations when they are in fact anti-choice organizations that push women
+            away from accessing the reproductive care of their choice.
+        </p>
+    </blockquote>
+
+
+    <p class="text-gray-700 mb-4">
+        Read the full Backgrounder at <a href="https://www.canada.ca/en/department-finance/news/2024/10/protecting-reproductive-freedom-by-preventing-abuse-of-charitable-status.html"
+           class="text-blue-500 hover:underline">canada.ca</a>
+    </p>
+
+    <h1 class="text-gray-700 mb-4">antichoice.ca</h1>
+    <p class="text-gray-700 mb-4">
+        This website is not affiliated with the Abortion Rights Coalition of Canada (ARCC) nor any other organization, government or otherwise.
+        It simply aims to provide searchable information about anti-choice organizations and uses the publicly available data from this
+        document: <a href="https://www.arcc-cdac.ca/media/2021/06/list-anti-choice-groups.pdf" class="text-blue-500 hover:underline">arcc-cdac.ca</a>
+    </p>
+</main>
+
+<footer class="bg-gray-800 text-white text-center p-4 mt-6">
+    <p>&copy; 2024 antichoice.ca</p>
+</footer>
+
+</body>
+</html>
