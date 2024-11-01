@@ -4,7 +4,7 @@ const ejs = require('ejs');
 
 // Load CPC data from JSON file
 const data = require('../data/cpcs.json');
-const outputDir = path.join(__dirname, '../../output');
+const outputDir = path.join(__dirname, '../../docs');
 
 // Ensure output directories exist
 if (!fs.existsSync(outputDir)) {

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crisis Pregnancy Centers</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<!-- Include Navbar Partial -->
+<!-- Navbar -->
+<nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex-shrink-0">
+                <a href="/" class="text-white font-extrabold text-2xl">AntiChoice.ca</a>
+            </div>
+
+            <!-- Links (hidden on mobile) -->
+            <div class="hidden sm:block">
+                <div class="flex space-x-4">
+                    <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="/support" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Support</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="sm:hidden">
+                <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" class="text-gray-300 hover:text-white hover:bg-gray-700 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Hamburger icon -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="sm:hidden hidden">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+            <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+            <a href="/support" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Support</a>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- JavaScript for toggling the mobile menu -->
+<script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+<!-- Main Content -->
+<div class="grid grid-cols-12 py-12 pt-32 md:py-36 relative pb-20 md:pb-36 md:pt-56 block bg-[#001524] text-gray-50">
+    <div class="col-centered tracking-wide uppercase md:px-0 px-4 col-span-12 text-4xl md:text-6xl font-extrabold text-center">
+        <div class="text-center col-centered">
+            Anti-Choice Directory
+        </div>
+        <div class="px-2 md:px-2 md:px-2 md:px-8 max-w-6xl mx-auto">
+            <div class="normal-case tracking-normal font-bold mt-4 text-lg md:text-xl">
+                <br>
+<!--                "To stop dishonest Canadian charities and organizations from restricting a woman’s access to the-->
+<!--                reproductive care that is best for her."-->
+<!--                <br/><br/>-->
+                <div class="max-w-screen-md mx-auto text-center">
+                    Groups that appear in this directory are considered anti-choice by the<br/>Abortion Rights Coalition of Canada.
+                </div>
+            </div>
+            <div class="mt-4">
+                <a href="#search_orgs">
+                    <div class="text-2xl hover:scale-110 tracking-wide cursor-pointer shadow-md duration-200 border-[#D6CC99] hover:bg-[#D6CC99] text-[#D6CC99] hover:text-[#001524] p-4 px-6 border-4 inline-block rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                             stroke="currentColor" class="relative z-10 -top-0.5 inline-block w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                        Search
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="search_orgs">
+    <div class="bg-[#fff] w-full border-t-8 pb-20 lg:pb-28 px-4 py-10 lg:px-20 lg:py-28">
+    <div class="px-2 md:px-2 md:px-8 max-w-7xl" style="margin-left: auto;margin-right: auto;">
+        <div class="text-5xl md:text-7xl uppercase font-extrabold text-[#001524]">SEARCH ORGS</div>
+        <div class="h-4 w-32 mt-2 mb-2 block bg-[#2A9D8F]"></div>
+        <div class="text-xl md:text-2xl mt-8 mb-8 text-[#001524] font-bold">
+            If you are seeking pro-choice reproductive support, you may want to avoid organizations listed in the
+            AntiChoice Canada website.
+            Click to learn more about an organization or charity's known affiliations, anti-choice messaging, and
+            previous campaigns.
+        </div>
+        <div class="search-wrapper">
+            <input id="search-input" style="border-width:6px;" oninput="checkIfEmpty()" type="text"
+                   placeholder="Search anti-choice groups..."
+                   class="duration-200 ease focus:bg-[#001524] focus:text-[#D6CC99] search-input text-xl md:text-3xl tracking-wide focus:outline-[#001524] focus:border-[#001524] focus:placeholder-[#001524] font-extrabold w-full p-5 py-5 rounded-full border-[#001524] text-[#001524] bg-transparent">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                 stroke="currentColor" class="search-icon-2 w-10 h-10">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+            </svg>
+        </div>
+        <div id="cancel-search" class="hidden">
+            <div onclick="clearSearch()"
+                 class="inline-block text-lg font-extrabold cursor-pointer mt-4 text-[#001624] duration-200 border-b-4 border-transparent hover:border-[#001624]">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                     stroke="currentColor" class="relative -top-0.5 inline-block inherit w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Clear search
+            </div>
+        </div>
+
+
+        <div id="search-option" class="section bg-[#fff]  p-8 hidden mt-12">
+            <div class="no-select text-2xl md:text-5xl text-inherit font-extrabold pb-3 border-b-4 border-gray-900 uppercase">
+                Search Results
+            </div>
+            <div id="search-results-spawn" class="grid col-centered mt-4 grid-cols-12">
+
+            </div>
+        </div>
+        <div id="default-option">
+            <div id="checkbox-container" class="text-[#001524] w-full mt-8"></div>
+            <div id="sections-container"></div>
+        </div>
+
+    </div>
+    </div>
+</div>
+
+
+<script src="./cpcs.json"></script>
+<script>
+    function toggleSection(section) {
+        const sectionElement = document.getElementById(section + '-section');
+        const caretElement = document.getElementById(section + '-caret');
+
+        if (!sectionElement.classList.contains('hidden')) {
+            sectionElement.classList.add('hidden');
+            caretElement.classList.remove('rotate-180');
+        } else {
+            sectionElement.classList.remove('hidden');
+            caretElement.classList.add('rotate-180');
+        }
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<div id="checkbox-container" class="text-[#001524] w-full mt-8"></div>
+<div id="sections-container"></div>
+<div class="mt-8">
+    <input id="search-input" type="text" placeholder="Search organizations..." class="p-2 border border-gray-300 rounded w-full">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const provinces = [
+            { code: "AB", name: "Alberta" },
+            { code: "BC", name: "British Columbia" },
+            { code: "MB", name: "Manitoba" },
+            { code: "NB", name: "New Brunswick" },
+            { code: "NL", name: "Newfoundland and Labrador" },
+            { code: "NT", name: "Northwest Territories" },
+            { code: "NS", name: "Nova Scotia" },
+            { code: "NU", name: "Nunavut" },
+            { code: "ON", name: "Ontario" },
+            { code: "PE", name: "Prince Edward Island" },
+            { code: "QC", name: "Quebec" },
+            { code: "SK", name: "Saskatchewan" },
+            { code: "YT", name: "Yukon" }
+        ];
+
+        const checkboxContainer = document.getElementById('checkbox-container');
+        const sectionsContainer = document.getElementById('sections-container');
+
+        // Function to create a checkbox element
+        function createCheckbox(id, label, checked = true) {
+            const wrapper = document.createElement('div');
+            wrapper.classList.add('inline-block');
+
+            const labelElem = document.createElement('label');
+            labelElem.classList.add('container', 'mr-6');
+
+            labelElem.innerHTML = `
+                <span class="relative text-lg -top-1">${label}</span>
+                <input id="${id}-checked" type="checkbox" ${checked ? 'checked' : ''}>
+                <span class="checkmark-2"></span>
+            `;
+            wrapper.appendChild(labelElem);
+            return wrapper;
+        }
+
+        // Generate checkboxes for each province
+        provinces.forEach(province => {
+            const checkbox = createCheckbox(province.code.toLowerCase(), province.code);
+            checkboxContainer.appendChild(checkbox);
+        });
+
+        // Generate the "All" checkbox
+        const allCheckbox = createCheckbox('all', 'All');
+        checkboxContainer.appendChild(allCheckbox);
+
+        // Event handler functions for checkboxes
+        function updateProvinceCheckboxes(checked) {
+            provinces.forEach(province => {
+                const checkbox = document.getElementById(`${province.code.toLowerCase()}-checked`);
+                checkbox.checked = checked;
+                toggleProvinceGroup(province.code.toLowerCase(), checked);
+            });
+        }
+
+        function updateAllCheckbox() {
+            const allChecked = provinces.every(province => document.getElementById(`${province.code.toLowerCase()}-checked`).checked);
+            document.getElementById('all-checked').checked = allChecked;
+        }
+
+        // Show or hide province group based on checkbox state
+        function toggleProvinceGroup(code, show) {
+            const groupDiv = document.getElementById(`${code}-group`);
+            if (groupDiv) {
+                groupDiv.style.display = show ? 'block' : 'none';
+            }
+        }
+
+        // Add event listener to the "All" checkbox
+        document.getElementById('all-checked').addEventListener('change', (event) => {
+            updateProvinceCheckboxes(event.target.checked);
+        });
+
+        // Add event listeners to each province checkbox
+        provinces.forEach(province => {
+            const checkbox = document.getElementById(`${province.code.toLowerCase()}-checked`);
+            checkbox.addEventListener('change', (event) => {
+                toggleProvinceGroup(province.code.toLowerCase(), event.target.checked);
+                updateAllCheckbox();
+            });
+        });
+
+        // Function to create a province section with a placeholder for org-objects
+        function createProvinceSection(province) {
+            const sectionDiv = document.createElement('div');
+            sectionDiv.id = `${province.code.toLowerCase()}-group`; // Set unique ID for each group
+            sectionDiv.innerHTML = `
+                <div onclick="toggleSection('${province.code.toLowerCase()}')"
+                     class="relative mt-12 text-[#001624] w-full duration-200 cursor-pointer border-[#001624] border-b-4 p-3 rounded-none hover:text-[#001624] bg-transparent hover:bg-gray-200">
+                    <div class="no-select text-2xl md:text-5xl text-inherit font-extrabold">
+                        <div class="w-10/12 select-none uppercase">${province.name}</div>
+                        <svg id="${province.code.toLowerCase()}-caret" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                             stroke-width="3.5" stroke="currentColor"
+                             class="duration-200 text-[#001624] rotate-180 absolute right-2 top-3 md:top-4 float-right w-10 h-10 inline-block">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="${province.code.toLowerCase()}-section">
+                    <div class="w-full font-bold mt-8 text-xl">
+                        <div class="grid col-centered grid-cols-12 pt-6 pb-6">
+                            <!-- Org-objects will be generated here -->
+                        </div>
+                    </div>
+                </div>
+            `;
+            return sectionDiv;
+        }
+
+        // Generate and append each province section, and hide sections initially if unchecked
+        provinces.forEach(province => {
+            const provinceSection = createProvinceSection(province);
+            sectionsContainer.appendChild(provinceSection);
+
+            // Hide section if its checkbox is initially unchecked
+            const checkbox = document.getElementById(`${province.code.toLowerCase()}-checked`);
+            toggleProvinceGroup(province.code.toLowerCase(), checkbox.checked);
+        });
+
+        // Populate sections based on data
+        function populateSections(data) {
+            const sections = {};
+
+            // Clear previous content in each section
+            document.querySelectorAll('[id$="-section"] .grid').forEach(grid => {
+                grid.innerHTML = ''; // Clear existing org-objects
+            });
+            document.querySelectorAll('[id$="-section"] .no-orgs-message').forEach(msg => {
+                msg.remove(); // Remove previous "No known organizations" messages
+            });
+
+            data.forEach(cpc => {
+                const sectionId = `${cpc.province.toLowerCase()}-section`;
+                const section = document.getElementById(sectionId);
+
+                if (section) {
+                    sections[sectionId] = true;
+                    const orgObject = document.createElement('span');
+
+                    let charityNumSpan = '';
+                    if (cpc.charity_num) {
+                        charityNumSpan = `<span class="text-lg block font-extralight">Charity # ${cpc.charity_num}</span>`;
+                    }
+
+                    orgObject.classList.add('col-span-12', 'mt-4', 'md:col-span-6', 'xl:col-span-4', 'px-2');
+                    orgObject.innerHTML = `
+                <a href="/${cpc.slug}" class="org-object block cursor-pointer">
+                    <span>${cpc.name}</span>
+                    <span class="text-lg block font-extralight">${cpc.city}, ${cpc.province}</span>
+                    ${charityNumSpan}
+                </a>
+            `;
+                    section.querySelector('.grid').appendChild(orgObject);
+                }
+            });
+
+            // Display "No known organizations" message if a section is empty
+            document.querySelectorAll('[id$="-section"]').forEach(section => {
+                if (!sections[section.id]) {
+                    const message = document.createElement('div');
+                    message.classList.add('no-orgs-message', 'text-lg', 'block', 'font-extralight', 'text-center', 'mt-4');
+                    message.textContent = "No known organizations. If you think this is a mistake, please let us know.";
+                    section.appendChild(message);
+                }
+            });
+        }
+
+        // Clear all sections
+        function clearSections() {
+            document.querySelectorAll('[id$="-section"] .grid').forEach(grid => grid.innerHTML = '');
+        }
+
+        let allData = []; // Store all data globally
+
+        fetch('./cpcs.json')
+            .then(response => response.json())
+            .then(data => {
+                allData = data; // Store data globally
+                fuse = new Fuse(allData, { keys: ['slug', 'name', 'city', 'province'], threshold: 0.3 });
+                populateSections(allData); // Use data to populate sections initially
+            })
+            .catch(error => console.error('Error loading JSON data:', error));
+
+// Use allData for search results without refetching
+        document.getElementById('search-input').addEventListener('input', (event) => {
+            const query = event.target.value;
+            const results = query ? fuse.search(query).map(result => result.item) : allData;
+            clearSections();
+            populateSections(results);
+        });
+
+    });
+</script>
+
+
+</body>
+</html>
