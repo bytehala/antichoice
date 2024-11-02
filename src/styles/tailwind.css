@@ -4,7 +4,7 @@
 
 html, body {
     max-width: 100% !important;
-    overflow-x: scroll !important;
+    /*overflow-x: scroll !important;*/
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -1740,11 +1740,11 @@ video {
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-html, body {
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    font-family: 'Montserrat', sans-serif;
-}
+/*html, body {*/
+/*    max-width: 100% !important;*/
+/*    overflow-x: hidden !important;*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*}*/
 
 .col-centered {
     margin-left: auto;

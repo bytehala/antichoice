@@ -55,7 +55,7 @@
             previous campaigns.
         </div>
         <div class="search-wrapper">
-            <input id="search-input" style="border-width:6px;" oninput="checkIfEmpty()" type="text"
+            <input id="search-input" style="border-width:6px;" type="text"
                    placeholder="Search anti-choice groups..."
                    class="duration-200 ease focus:bg-[#001524] focus:text-[#D6CC99] search-input text-xl md:text-3xl tracking-wide focus:outline-[#001524] focus:border-[#001524] focus:placeholder-[#001524] font-extrabold w-full p-5 py-5 rounded-full border-[#001524] text-[#001524] bg-transparent">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
@@ -297,7 +297,7 @@
             .then(response => response.json())
             .then(data => {
                 allData = data; // Store data globally
-                fuse = new Fuse(allData, { keys: ['slug', 'name', 'city', 'province'], threshold: 0.3 });
+                fuse = new Fuse(allData, { keys: ['slug'], threshold: 0.5 });
                 populateSections(allData); // Use data to populate sections initially
             })
             .catch(error => console.error('Error loading JSON data:', error));
@@ -306,6 +306,7 @@
         document.getElementById('search-input').addEventListener('input', (event) => {
             const query = event.target.value;
             const results = query ? fuse.search(query).map(result => result.item) : allData;
+            console.log("fuse search")
             clearSections();
             populateSections(results);
         });
