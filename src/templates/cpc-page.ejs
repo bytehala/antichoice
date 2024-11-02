@@ -24,21 +24,48 @@
     <!-- Table for other key-value pairs -->
     <table class="w-full border border-gray-200">
         <tbody>
-        <% Object.entries(cpc).forEach(([key, value]) => { %>
-            <% if (key !== 'name' && key !== 'description' && key !== 'slug' && value) { %>
-                <tr class="border-t border-gray-200">
-                    <td class="px-4 py-2 font-semibold capitalize"><%= key.replace('_', ' ') %></td>
-                    <td class="px-4 py-2">
-                        <% if (Array.isArray(value)) { %>
-                            <!-- Join array values with line breaks -->
-                            <span><%= value.join('<br>') %></span>
-                        <% } else { %>
-                            <%= value %>
-                        <% } %>
-                    </td>
-                </tr>
-            <% } %>
-        <% }) %>
+        <%
+        // Define a mapping for custom headers and transformations
+        const headers = {
+            is_charity: 'Charity?',
+            charity_num: 'Charity Number',
+            charity_type: 'Charity Type',
+            org_type: 'Org. Type',
+            affiliate_of: 'Affiliate of (and religious affiliation)',
+            city: 'City',
+            province: 'Province',
+            other_names: 'Other Names',
+            website: 'Website and Social Media',
+            sex_ed_programs: 'Sex Ed Programs'
+        };
+
+        // Iterate over each key-value pair in the CPC data object
+        Object.entries(cpc).forEach(([key, value]) => {
+            // Only render rows for keys in the headers map and non-empty values
+        if (headers[key] && value) {
+        %>
+            <tr class="border-t border-gray-200">
+                <!-- Render the custom header text -->
+                <td class="px-4 py-2 font-semibold capitalize"><%= headers[key] %></td>
+                <td class="px-4 py-2">
+                    <%
+                        // Special case for is_charity: Convert "Y" to "Yes" and "N" to "No"
+                    if (key === 'is_charity') {
+                    %><%= value === 'Y' ? 'Yes' : 'No' %><%
+                    } else if (Array.isArray(value)) {
+                        // Join array values with line breaks for readability
+                    %><span><%= value.join('<br>') %></span><%
+                    } else {
+                        // Render other values as they are
+                    %><%= value %><%
+                    }
+                    %>
+                </td>
+            </tr>
+        <%
+        }
+        });
+        %>
         </tbody>
     </table>
 </div>
