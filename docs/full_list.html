@@ -110,6 +110,12 @@
                 // Create a table row
                 const row = document.createElement('tr');
                 row.classList.add('border-b');
+                // Add classes for odd and even rows
+                if (index % 2 === 0) {
+                    row.classList.add('bg-white');
+                } else {
+                    row.classList.add('bg-gray-100');
+                }
 
                 // Add data to each cell in the row using JavaScript template literals
                 row.innerHTML = `
