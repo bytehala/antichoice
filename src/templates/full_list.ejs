@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crisis Pregnancy Centers</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<!-- Include Navbar Partial -->
+<%- include('partials/navbar') %>
+
+<main class="mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+    <h1 class="text-3xl font-bold mb-4">Table View</h1>
+    <p class="text-gray-700 mb-4">This is the full list of anti-choice groups as found in the ARCC report.</p>
+
+    <!-- Table to display CPC data -->
+    <div class="table-container">
+        <table class="table-auto w-full bg-white shadow-md rounded">
+            <thead>
+            <tr class="bg-gray-800 text-white">
+                <th class="px-4 py-2">#</th>
+                <th class="px-4 py-2">Name</th>
+                <th class="px-4 py-2">Charity?</th>
+                <th class="px-4 py-2">Charity #</th>
+                <th class="px-4 py-2">Charity Type</th>
+                <th class="px-4 py-2">Org. Type</th>
+                <th class="px-4 py-2">Affiliate Of (and religious affiliation)</th>
+                <th class="px-4 py-2">City</th>
+                <th class="px-4 py-2">Prov.</th>
+                <th class="px-4 py-2">Other Names</th>
+                <th class="px-4 py-2">Website and Social Media</th>
+                <th class="px-4 py-2">Sex Ed Programs</th>
+                <!--            <th class="px-4 py-2">Description</th>-->
+            </tr>
+            </thead>
+            <tbody id="table-body">
+            <!-- Rows will be generated dynamically here -->
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<script>
+    // Load the JSON data and render the table
+    fetch('./cpcs.json')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById('table-body');
+
+            data.forEach((cpc, index) => {
+                // Create a table row
+                const row = document.createElement('tr');
+                row.classList.add('border-b');
+
+                // Add data to each cell in the row using JavaScript template literals
+                row.innerHTML = `
+                    <td class="px-4 py-2">${index + 1}</td>
+                    <td class="px-4 py-2">
+                        <a href="/${cpc.slug}" class="text-blue-500 hover:underline">${cpc.name}</a>
+                    </td>
+                    <td class="px-4 py-2">${cpc.is_charity}</td>
+                    <td class="px-4 py-2">${cpc.charity_num}</td>
+                    <td class="px-4 py-2">${cpc.charity_type}</td>
+                    <td class="px-4 py-2">${cpc.org_type}</td>
+                    <td class="px-4 py-2">${cpc.affiliate_of}</td>
+                    <td class="px-4 py-2">${cpc.city}</td>
+                    <td class="px-4 py-2">${cpc.province}</td>
+                    <td class="px-4 py-2">${cpc.other_names}</td>
+                    <td class="px-4 py-2">${cpc.website.join('\n ')}</td>
+                    <td class="px-4 py-2">${cpc.sex_ed_programs}</td>
+                `;
+
+                // Append the row to the table body
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => console.error('Error loading JSON data:', error));
+</script>
+
+
+</body>
+</html>

@@ -36,6 +36,21 @@ ejs.renderFile(
     }
 );
 
+// Generate the full list page using ejs.renderFile
+ejs.renderFile(
+    path.join(__dirname, '../templates/full_list.ejs'),
+    { cpcs: data },
+    { views: path.join(__dirname, '../templates') }, // Ensures partials are found
+    (err, indexHtml) => {
+        if (err) {
+            console.error('Error rendering full list page:', err);
+            return;
+        }
+        fs.writeFileSync(path.join(outputDir, 'full_list.html'), indexHtml);
+        console.log('full_list page generated successfully');
+    }
+);
+
 // Generate individual CPC pages
 data.forEach(cpc => {
     ejs.renderFile(
