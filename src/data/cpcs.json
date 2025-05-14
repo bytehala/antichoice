@@ -431,7 +431,7 @@
     "charity_num": "106776149",
     "charity_type": "Poverty",
     "org_type": "Advocacy",
-    "affiliate_of": "",
+    "affiliate_of": "LifeCanada",
     "city": "North Battlefield",
     "province": "SK",
     "other_names": "Battlefords Right to Life Corporation",
@@ -1365,7 +1365,7 @@
     "affiliate_of": "PCC / Heartbeat Int’l / Care Net / Evangelical",
     "city": "Burnaby",
     "province": "BC",
-    "other_names": "Runs Crisis Pregnancy Centre of Burnaby & New Westminster; and Vancouver & Richmond; and Post-Abortion Community Services",
+    "other_names": "Runs Cedar Pregnancy Care Centres; and Post-Abortion Community Services",
     "website": [
       "http://christianadvocacy.ca/ www.facebook.com/pages/category/Nonp rofit-Organization/The-Christian- Advocacy-Society-113627047153101/ www.youtube.com/channel/UCJW- dy6JlIsdhBoB-OFi4nQ"
     ],
@@ -1459,7 +1459,7 @@
   },
   {
     "slug": "crisis-pregnancy-centre-of-burnaby-new-westminster",
-    "name": "Crisis Pregnancy Centre of Burnaby & New Westminster",
+    "name": "Cedar Pregnancy Care Centre",
     "is_charity": "Y",
     "charity_num": "136223971",
     "charity_type": "Poverty",
@@ -1467,29 +1467,29 @@
     "affiliate_of": "PCC / Heartbeat Int’l / Evangelical",
     "city": "Burnaby",
     "province": "BC",
-    "other_names": "Run by Christian Advocacy Society of Greater Vancouver",
+    "other_names": "Formerly Crisis Pregnancy Centre of Burnaby & New Westminster, Run by Christian Advocacy Society of Greater Vancouver",
     "website": [
       "www.optionscentre.ca"
     ],
     "sex_ed_programs": "Offers S.H.A.R.E. program (Sexual health And Relationship Education). https://optionscentre.ca/share Says: “Our presentation contributes to BC’s curriculum requirements for PHE Grade 6-12.” And: “Thousands of high school students have now participated.” Have been “in schools and for youth groups in Vancouver, North Vancouver, West Vancouver, Richmond, Burnaby, New Westminster, Delta, Surrey and White Rock.”",
-    "description": "Crisis Pregnancy Centre of Burnaby & New Westminster is a registered charity that is considered by Abortion Rights Coalition of Canada to be an anti-choice crisis pregnancy centre or religious post-abortion counselling agency"
+    "description": "Cedar Pregnancy Care Centre is a registered charity that is considered by Abortion Rights Coalition of Canada to be an anti-choice crisis pregnancy centre or religious post-abortion counselling agency"
   },
   {
     "slug": "crisis-pregnancy-centre-of-vancouver-richmond",
-    "name": "Crisis Pregnancy Centre of Vancouver & Richmond",
+    "name": "Cedar Pregnancy Care Centre",
     "is_charity": "Y",
-    "charity_num": "1",
+    "charity_num": "106993348",
     "charity_type": "Poverty",
     "org_type": "CPC",
     "affiliate_of": "PCC / Heartbeat Int’l / Care Net / Evangelical",
     "city": "Vancouver",
     "province": "BC",
-    "other_names": "Crisis Pregnancy Centre of Vancouver Society Run by Christian Advocacy Society of Greater Vancouver",
+    "other_names": "Formerly Crisis Pregnancy Centre of Vancouver & Richmond, Crisis Pregnancy Centre of Vancouver Society, Run by Christian Advocacy Society of Greater Vancouver",
     "website": [
       "www.optionscentre.ca"
     ],
     "sex_ed_programs": "Offers S.H.A.R.E. program (Sexual health And Relationship Education). https://optionscentre.ca/share Says: “Our presentation contributes to BC’s curriculum requirements for PHE Grade 6-12.” And: “Thousands of high school students have now participated.” Have been “in schools and for youth groups in Vancouver, North Vancouver, West Vancouver, Richmond, Burnaby, New Westminster, Delta, Surrey and White Rock.”",
-    "description": "Crisis Pregnancy Centre of Vancouver & Richmond is a registered charity that is considered by Abortion Rights Coalition of Canada to be an anti-choice crisis pregnancy centre or religious post-abortion counselling agency"
+    "description": "Cedar Pregnancy Care Centre is a registered charity that is considered by Abortion Rights Coalition of Canada to be an anti-choice crisis pregnancy centre or religious post-abortion counselling agency"
   },
   {
     "slug": "crossroads-clinic-association",
@@ -1603,7 +1603,7 @@
     "affiliate_of": "LifeCanada",
     "city": "Drayton Valley",
     "province": "AB",
-    "other_names": "",
+    "other_names": "Respect for Life Association of Drayton Valley",
     "website": [
       "www.facebook.com/dvrfl (FB not active since 2017) https://lifecanada.org/drayton/"
     ],
@@ -1663,7 +1663,7 @@
   },
   {
     "slug": "edmonton-pro-life-society",
-    "name": "Edmonton Pro-life Society",
+    "name": "Edmonton Pro-life",
     "is_charity": "Y",
     "charity_num": "118894047",
     "charity_type": "Poverty",
@@ -1671,7 +1671,7 @@
     "affiliate_of": "",
     "city": "Edmonton",
     "province": "AB",
-    "other_names": "",
+    "other_names": "Edmonton Pro-life society",
     "website": [
       "www.edmontonprolife.org/"
     ],
@@ -2042,12 +2042,12 @@
     "charity_num": "889717369",
     "charity_type": "Poverty",
     "org_type": "CPC",
-    "affiliate_of": "PCC / Heartbeat Int’l / Care Net / Evangelical",
+    "affiliate_of": "PCC / Evangelical",
     "city": "Victoria",
     "province": "BC",
     "other_names": "Victoria Pregnancy Centre Society",
     "website": [
-      "https://www.havenpsc.ca/ www.facebook.com/victoriapregnancycent re www.instagram.com/havenpregnancysupp ortclinic/"
+      "https://www.havenpsc.ca/ www.facebook.com/victoriapregnancycentre www.instagram.com/havenpregnancysupportclinic/"
     ],
     "sex_ed_programs": "Education Services: Prenatal, Childbirth, Parenting and Life Skills classes",
     "description": "Haven Pregnancy Support Clinic is a registered charity that is considered by Abortion Rights Coalition of Canada to be an anti-choice crisis pregnancy centre or religious post-abortion counselling agency"
@@ -2708,7 +2708,7 @@
     "affiliate_of": "",
     "city": "West Vancouver",
     "province": "BC",
-    "other_names": "Abortionincanada.c a",
+    "other_names": "Abortionincanada.ca Run by LifeCanada",
     "website": [
       "https://love4life.ca/"
     ],
@@ -2739,7 +2739,7 @@
     "charity_num": "119027258",
     "charity_type": "Poverty",
     "org_type": "Advocacy",
-    "affiliate_of": "Saskatchewan Pro- Life",
+    "affiliate_of": "Saskatchewan Pro-Life / LifeCanada",
     "city": "Cactus Lake",
     "province": "SK",
     "other_names": "Macklin Pro-life Association",
@@ -3028,10 +3028,10 @@
     "charity_num": "891337990",
     "charity_type": "Poverty",
     "org_type": "Advocacy",
-    "affiliate_of": "",
+    "affiliate_of": "LifeCanada",
     "city": "Fredericton",
     "province": "NB",
-    "other_names": "Runs Women’s Care Centre",
+    "other_names": "Runs Women’s Care Centre in Fredericton. Note: Claims to have affiliate chapters in Moncton, Saint John, and Miramichi but no info on them.",
     "website": [
       "www.facebook.com/NBRightToLife/"
     ],
@@ -3091,32 +3091,32 @@
   },
   {
     "slug": "norfolk-pregnancy-centre-inc",
-    "name": "Norfolk Pregnancy Centre Inc.",
+    "name": "Norfolk Family & Pregnancy Resource Centre",
     "is_charity": "Y",
     "charity_num": "823065370",
     "charity_type": "Community Org., Health",
     "org_type": "CPC",
-    "affiliate_of": "PCC / Heartbeat Int’l https://twitter.co m/ReproJustice_H N/status/1629459 996734783488 Funded by United Way of Haldimand and Norfolk (Aug 2017). https://twitter.co m/ReproJustice_H N/status/9713542 82128650240/pho to/1",
+    "affiliate_of": "Heartbeat Int’l",
     "city": "Delhi",
     "province": "ON",
-    "other_names": "",
+    "other_names": "Norfolk Pregnancy Centre Inc.",
     "website": [
-      "www.norfolkpc.org www.facebook.com/norfolkpregnancycent re www.instagram.com/norfolkpc/"
+      "www.norfolkpc.org www.facebook.com/norfolkpregnancycentre www.instagram.com/norfolkpc/"
     ],
     "sex_ed_programs": "",
     "description": "Norfolk Pregnancy Centre Inc. is a registered charity that is considered by Abortion Rights Coalition of Canada to be an anti-choice crisis pregnancy centre or religious post-abortion counselling agency"
   },
   {
     "slug": "norfolk-pregnancy-centre-inc",
-    "name": "Norfolk Pregnancy Centre Inc.",
+    "name": "Norfolk Family & Pregnancy Resource Centre",
     "is_charity": "Y",
     "charity_num": "823065370",
     "charity_type": "Community Org., Health",
     "org_type": "CPC",
-    "affiliate_of": "PCC / Heartbeat Int’l",
+    "affiliate_of": "Heartbeat Int’l",
     "city": "Simcoe",
     "province": "ON",
-    "other_names": "",
+    "other_names": "Norfolk Pregnancy Centre Inc.",
     "website": [
       "www.norfolkpc.org www.facebook.com/norfolkpregnancycent re www.instagram.com/norfolkpc/"
     ],
@@ -3402,7 +3402,7 @@
     "charity_num": "131621906",
     "charity_type": "Poverty",
     "org_type": "Advocacy",
-    "affiliate_of": "",
+    "affiliate_of": "LifeCanada",
     "city": "Woodstock",
     "province": "ON",
     "other_names": "",
@@ -3448,12 +3448,12 @@
   },
   {
     "slug": "pei-life-association-inc",
-    "name": "PEI Life Association Inc.",
+    "name": "PEI Life Association",
     "is_charity": "Y",
     "charity_num": "851861443",
     "charity_type": "Poverty",
     "org_type": "Advocacy",
-    "affiliate_of": "",
+    "affiliate_of": "LifeCanada",
     "city": "Charlottetown",
     "province": "PE",
     "other_names": "PEI Right to Life Association Inc.",
@@ -4355,7 +4355,7 @@
     "affiliate_of": "LifeCanada Subordinate to the Signal Hill",
     "city": "Rossland",
     "province": "BC",
-    "other_names": "",
+    "other_names": "Trail-Rossland Right to Life",
     "website": [
       "No website or social media"
     ],
@@ -4585,7 +4585,7 @@
   },
   {
     "slug": "st-thomas-and-district-right-to-life",
-    "name": "St. Thomas and District Right to Life",
+    "name": "Choose Life Elgin",
     "is_charity": "Y",
     "charity_num": "119119915",
     "charity_type": "Poverty",
@@ -4593,9 +4593,9 @@
     "affiliate_of": "LifeCanada Alliance for Life Ont.",
     "city": "St. Thomas",
     "province": "ON",
-    "other_names": "Respect for Life St. Thomas Right to Life",
+    "other_names": "Respect for Life, St. Thomas Right to Life",
     "website": [
-      "www.respectforlife.ca/ www.facebook.com/Right2LifeStT"
+      "chooselifeelgin.ca facebook.com/ChooseLifeElgin www.respectforlife.ca www.facebook.com/Right2LifeStT"
     ],
     "sex_ed_programs": "",
     "description": "St. Thomas and District Right to Life is a registered charity that is considered by Abortion Rights Coalition of Canada to be an anti-choice crisis pregnancy centre or religious post-abortion counselling agency"
@@ -4946,7 +4946,7 @@
     "affiliate_of": "LifeCanada",
     "city": "Vernon",
     "province": "BC",
-    "other_names": "",
+    "other_names": "Vernon and Area Right to Life",
     "website": [
       "www.prolifevernon.ca/ www.facebook.com/Vernon-and-Area-Pro- Life-Society-369228856766660"
     ],
